@@ -10,7 +10,7 @@ export default function AchievementsSection() {
   const achievements = [
     {
       id: 1,
-      title: "🚦 UYIR Road Safety Hackathon - Finalist",
+      title: "UYIR Road Safety Hackathon - Finalist",
       organization: "Sri Krishna College of Engineering and Technology, Coimbatore",
       bullets: [
         "Finalist among 3,000+ participating teams, securing a position in the Top 145.",
@@ -23,7 +23,7 @@ export default function AchievementsSection() {
     },
     {
       id: 2,
-      title: "👩‍💻 TANCAM'S TNWISE 2025 Women's Hackathon - Finalist",
+      title: " TANCAM'S TNWISE 2025 Women's Hackathon - Finalist",
       organization: "Kumaraguru College of Technology, Coimbatore",
       bullets: [
         "Selected as a finalist in the TNWISE 2025 Women's Hackathon.",
@@ -35,7 +35,7 @@ export default function AchievementsSection() {
     },
     {
       id: 3,
-      title: "🤖 AI Meets Campus – Award for Impressive Performance",
+      title: "AI Meets Campus – Award for Impressive Performance",
       organization: "Campus Initiative",
       bullets: [
         "Awarded for exceptional performance during the AI Meets Campus initiative.",
@@ -47,7 +47,7 @@ export default function AchievementsSection() {
     },
     {
       id: 4,
-      title: "🏙️ SUNHACKS'25 National Hackathon - Finalist",
+      title: " SUNHACKS'25 National Hackathon - Finalist",
       organization: "Sandip University, Nashik",
       bullets: [
         "Finalist in the 36-hour national hackathon.",
@@ -59,7 +59,7 @@ export default function AchievementsSection() {
     },
     {
       id: 5,
-      title: "🚀 Google Developers Groups Agentathon - Finalist",
+      title: " Google Developers Groups Agentathon - Finalist",
       organization: "Malla Reddy University, Hyderabad",
       bullets: [
         "Shortlisted among 1,000 teams and advanced to the Top 500.",
@@ -195,8 +195,7 @@ export default function AchievementsSection() {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: idx * 0.05 }}
-                                className="aspect-square rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 border border-primary/30 flex items-center justify-center cursor-pointer hover:border-primary transition-all hover:shadow-lg group"
-                              >
+                                className="rounded-lg border border-primary/30 cursor-pointer hover:border-primary transition-all hover:shadow-lg group overflow-hidden"  >
                                 <div className="text-center">
                                   <ImageIcon className="w-8 h-8 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform" />
                                   <p className="text-sm font-medium text-foreground/70 px-2">

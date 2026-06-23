@@ -55,15 +55,15 @@ export default function HeroSection() {
             variants={itemVariants}
             className="text-xl md:text-2xl text-foreground/80 mb-8 font-medium"
           >
-            CS Student & Full-Stack Developer
+            AI Enthusiast | Software Developer
           </motion.p>
 
           <motion.p
             variants={itemVariants}
             className="text-lg text-foreground/60 mb-8 max-w-lg leading-relaxed"
           >
-            Building AI-powered solutions and scalable systems. Passionate about full-stack engineering, GenAI applications, and creating impactful software that solves real-world problems.
-          </motion.p>
+            Passionate about building scalable software, AI-powered applications, and solving real-world problems through technology.
+            </motion.p>
 
           <motion.div
             variants={itemVariants}
@@ -86,7 +86,7 @@ export default function HeroSection() {
             className="flex gap-4 flex-wrap"
           >
             <a
-              href="https://drive.google.com/file/d/YOUR_RESUME_ID/view"
+              href="https://drive.google.com/file/d/1dOZK0M8TavGrbEaFuX5inYems06BH5vz/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/40 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2"
@@ -100,7 +100,7 @@ export default function HeroSection() {
               href="#contact"
               className="px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105 active:scale-95"
             >
-              Contact Me
+              Contact
             </a>
           </motion.div>
         </motion.div>
@@ -120,7 +120,11 @@ export default function HeroSection() {
           >
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/40 shadow-2xl shadow-primary/20 glass-effect"
             >
-              <div className="w-full h-full bg-gradient-to-br from-primary via-secondary to-accent opacity-40" />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fdab03a5c9969445fbdbe0f83e505ec9c%2Fdfdf32f5da6a405db2826c9aa070d28a?format=webp&width=800&height=1200"
+                alt="Tanya K Profile"
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
 

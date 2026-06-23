@@ -95,8 +95,8 @@ export default function Footer() {
           className="border-t border-border/50 pt-8"
         >
           <p className="text-center text-foreground/60 text-sm">
-            © {currentYear} Tanya K. All rights reserved. | Designed & Built with{" "}
-            <span className="text-primary">❤</span>
+            © {currentYear} Tanya K. All rights reserved. 
+           
           </p>
         </motion.div>
       </div>

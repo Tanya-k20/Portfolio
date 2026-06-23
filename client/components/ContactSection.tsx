@@ -26,7 +26,6 @@ export default function ContactSection() {
   };
 
   const socials = [
-    { icon: Mail, link: "mailto:karupstanya@gmail.com", label: "Email" },
     { icon: Linkedin, link: "https://linkedin.com/in/tanyak20", label: "LinkedIn" },
     { icon: Github, link: "https://github.com/Tanya-k20", label: "GitHub" },
   ];

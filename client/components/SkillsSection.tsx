@@ -9,25 +9,25 @@ export default function SkillsSection() {
     {
       title: "Frontend",
       icon: Zap,
-      skills: ["React", "TailwindCSS", "HTML/CSS", "JavaScript", "Responsive Design"],
+      skills: ["React", "TailwindCSS", "HTML/CSS", "JavaScript", "Streamlit"],
       color: "from-amber-600 to-orange-500",
     },
     {
       title: "Backend & AI",
       icon: Code2,
-      skills: ["Python", "FastAPI", "LLMs & RAG", "Prompt Engineering", "Lang Chain"],
-      color: "from-orange-600 to-amber-600",
-    },
+      skills: ["Python", "FastAPI", "LLMs & RAG", "Prompt Engineering", "Lang Chain","Django","NLP","ML(Basics)"],
+      color: "from-orange-600 to-amber-600",    
+    } ,
     {
-      title: "Database & Cloud",
+      title: "Database",
       icon: Database,
-      skills: ["SQL", "Vector DB", "PostgreSQL", "Docker", "Cloud Computing"],
+      skills: ["SQL", "Vector DB", "PostgreSQL", "Docker"],
       color: "from-yellow-700 to-amber-600",
     },
     {
       title: "Tools & Analytics",
       icon: Wrench,
-      skills: ["Git/GitHub", "Power BI", "Jupyter Notebook", "Linux", "API Development"],
+      skills: ["Git/GitHub", "Power BI", "Jupyter Notebook", "Excel"],
       color: "from-amber-700 to-orange-600",
     },
   ];
@@ -109,7 +109,7 @@ export default function SkillsSection() {
           <div className="space-y-6">
             {[
               { name: "Python & Backend Development", level: 85 },
-              { name: "FastAPI & REST APIs", level: 80 },
+              { name: "FastAPI ", level: 80 },
               { name: "AI/ML & LLMs", level: 75 },
               { name: "Full-Stack Development", level: 80 },
             ].map((skill, idx) => (
