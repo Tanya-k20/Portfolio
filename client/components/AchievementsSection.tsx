@@ -18,7 +18,7 @@ export default function AchievementsSection() {
         "Integrated air quality and temperature monitoring for enhanced driver awareness.",
         "Received valuable feedback from the jury to refine the solution further.",
       ],
-      gallery: ["Event Photos", "Team Photos", "Project Demo", "Certificate", "Hackathon Highlights"],
+      gallery: ["/assets/uyir1.jpeg", "/assets/uyir2.jpeg", "/assets/uyir3.jpeg", "/assets/uyir4.jpeg", "/assets/uyir5.jpeg"],
       icon: Trophy,
     },
     {
@@ -30,7 +30,7 @@ export default function AchievementsSection() {
         "Collaborated on innovative solutions addressing real-world challenges.",
         "Enhanced problem-solving, teamwork, and technical skills.",
       ],
-      gallery: ["Team Photos", "Event Moments", "Certificate", "Project Showcase"],
+      gallery: ["/assets/tn1.jpeg", "/assets/tn2.jpeg", "/assets/tn3.jpeg", "/assets/tn4.jpeg","/assets/tn5.jpeg"],
       icon: Award,
     },
     {
@@ -42,7 +42,7 @@ export default function AchievementsSection() {
         "Participated in hands-on AI and UI design activities.",
         "Explored AI ethics, emerging technologies, and career opportunities.",
       ],
-      gallery: ["Award Ceremony", "Workshop Photos", "Activity Highlights", "Certificate"],
+      gallery: ["/assets/qud1.png", "/assets/qud2.png", "/assets/qud3.jpeg", "/assets/qud4.jpeg", "/assets/qud5.png","/assets/qud6.png"],
       icon: Trophy,
     },
     {
@@ -54,7 +54,7 @@ export default function AchievementsSection() {
         'Built "City Pulse: Smart Urban Growth Platform."',
         "Strengthened innovation, teamwork, and technical problem-solving skills.",
       ],
-      gallery: ["Team Photos", "Project Presentation", "Event Highlights", "Certificate"],
+      gallery: ["/assets/san1.jpeg", "/assets/san2.jpeg", "/assets/san3.jpeg", "/assets/san4.jpeg", "/assets/san5.jpeg" ,"/assets/san6.jpeg"],
       icon: Trophy,
     },
     {
@@ -66,7 +66,7 @@ export default function AchievementsSection() {
         "Participated in the 36-hour Agentic AI Hackathon.",
         "Gained valuable experience in AI development and collaborative innovation.",
       ],
-      gallery: ["Team Photos", "Hackathon Event", "Project Screenshots", "Certificate", "Event Highlights"],
+      gallery: ["/assets/h1.jpeg", "/assets/h2.jpeg", "/assets/h3.jpeg", "/assets/h4.jpeg", "/assets/h5.jpeg", "/assets/h6.jpeg" ,"/assets/h7.jpeg", "/assets/h9.jpeg"],
       icon: Award,
     },
   ];
@@ -196,12 +196,11 @@ export default function AchievementsSection() {
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: idx * 0.05 }}
                                 className="rounded-lg border border-primary/30 cursor-pointer hover:border-primary transition-all hover:shadow-lg group overflow-hidden"  >
-                                <div className="text-center">
-                                  <ImageIcon className="w-8 h-8 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform" />
-                                  <p className="text-sm font-medium text-foreground/70 px-2">
-                                    {item}
-                                  </p>
-                                </div>
+                              <img
+                                 src={item}
+                                 alt={`Gallery ${idx + 1}`}
+                                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+/>
                               </motion.div>
                             ))}
                           </div>

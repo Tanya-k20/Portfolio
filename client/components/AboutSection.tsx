@@ -26,7 +26,7 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
   className="w-40 h-40 border"
 />
 
-  const education = [
+const education = [
     {
       id: 1,
       type: "education",

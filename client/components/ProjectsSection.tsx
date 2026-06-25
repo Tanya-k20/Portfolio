@@ -15,6 +15,7 @@ export default function ProjectsSection() {
       category: "ai",
       tech: ["LLMs", "Lang Chain", "Python", "FastAPI", "AI Agents"],
       github: "https://github.com/Tanya-k20",
+      image: "/assets/ai1.png",
       live: "#",
       gradient: "from-amber-700 to-amber-600",
     },
@@ -25,6 +26,7 @@ export default function ProjectsSection() {
       category: "ai",
       tech: ["GenAI", "Python", "FastAPI", "React", "DALL-E/Stable Diffusion"],
       github: "https://github.com/Tanya-k20",
+      image: "/assets/ai2.png",
       live: "#",
       gradient: "from-orange-600 to-amber-500",
     },
@@ -35,6 +37,7 @@ export default function ProjectsSection() {
       category: "ai",
       tech: ["FastAPI", "PostgreSQL", "RAG", "Vector DB", "JWT", "Docker"],
       github: "https://github.com/Tanya-k20",
+      image: "/assets/ai3.png",
       live: "#",
       gradient: "from-yellow-700 to-amber-700",
     },
@@ -45,6 +48,7 @@ export default function ProjectsSection() {
       category: "ai",
       tech: ["Python", "EfficientNet", "Deep Learning", "TensorFlow", "AI/ML"],
       github: "https://github.com/Tanya-k20",
+      image: "/assets/p8.png",
       live: "#",
       gradient: "from-yellow-700 to-amber-600",
     },
@@ -55,6 +59,7 @@ export default function ProjectsSection() {
       category: "web",
       tech: ["React", "Python", "FastAPI", "PostgreSQL", "Geolocation"],
       github: "https://github.com/Tanya-k20",
+      image: "/assets/p9.png",
       live: "#",
       gradient: "from-amber-600 to-orange-500",
     },
@@ -65,6 +70,7 @@ export default function ProjectsSection() {
       category: "ai",
       tech: ["GenAI", "Power BI", "Data Analysis", "Financial Systems", "Python"],
       github: "#",
+      image: "/assets/ai5.png",
       live: "#",
       gradient: "from-amber-800 to-amber-700",
     },
@@ -89,99 +95,109 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" ref={ref} className="relative py-20 md:py-32 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-display">
-            Featured <span className="gradient-text">Projects</span>
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded" />
-        </motion.div>
+<div className="max-w-6xl mx-auto px-6">
 
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex gap-3 mb-12 flex-wrap"
-        >
-          {filters.map((f) => (
-            <motion.button
-              key={f}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setFilter(f)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 capitalize ${
-                filter === f
-                  ? "bg-primary text-primary-foreground shadow-lg shadow-primary/40"
-                  : "bg-muted text-foreground/70 hover:bg-muted/80"
-              }`}
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={inView ? { opacity: 1, y: 0 } : {}}
+    transition={{ duration: 0.6 }}
+    className="mb-12"
+  >
+    <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-display">
+      Featured <span className="gradient-text">Projects</span>
+    </h2>
+
+    <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded" />
+  </motion.div>
+
+  <motion.div
+    initial={{ opacity: 0, y: 10 }}
+    animate={inView ? { opacity: 1, y: 0 } : {}}
+    transition={{ duration: 0.6, delay: 0.2 }}
+    className="flex gap-3 mb-12 flex-wrap"
+  >
+    {filters.map((f) => (
+      <button
+        key={f}
+        onClick={() => setFilter(f)}
+        className={`px-6 py-2 rounded-full font-medium transition-all duration-300 capitalize ${
+          filter === f
+            ? "bg-primary text-primary-foreground"
+            : "bg-muted text-foreground/70"
+        }`}
+      >
+        {f}
+      </button>
+    ))}
+  </motion.div>
+
+  <motion.div
+    variants={containerVariants}
+    initial="hidden"
+    animate={inView ? "visible" : "hidden"}
+    className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+  >
+    {filteredProjects.map((project) => (
+      <motion.div
+        key={project.id}
+        variants={itemVariants}
+        className="group glass-effect dark:glass-effect-dark rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
+      >
+        <div className="h-48 relative overflow-hidden">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+
+          <div className="absolute inset-0 bg-black/20" />
+
+          <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-white/20 hover:bg-white/30 rounded-lg text-white"
             >
-              {f}
-            </motion.button>
-          ))}
-        </motion.div>
+              <Github className="w-5 h-5" />
+            </a>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {filteredProjects.map((project) => (
-            <motion.div
-              key={project.id}
-              variants={itemVariants}
-              className="group glass-effect dark:glass-effect-dark rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-white/20 hover:bg-white/30 rounded-lg text-white"
             >
-              <div className={`h-48 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
-                <div className="absolute inset-0 flex items-center justify-center text-white/20">
-                  <div className="text-6xl font-bold opacity-20">{"<>"}</div>
-                </div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  className="absolute inset-0 bg-black/40 flex items-center justify-center gap-4"
-                >
-                  <a
-                    href={project.github}
-                    className="p-3 bg-white/20 hover:bg-white/30 rounded-lg transition-all text-white"
-                  >
-                    <Github className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={project.live}
-                    className="p-3 bg-white/20 hover:bg-white/30 rounded-lg transition-all text-white"
-                  >
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
-                </motion.div>
-              </div>
+              <ExternalLink className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-foreground mb-2">{project.title}</h3>
-                <p className="text-foreground/70 text-sm mb-4 leading-relaxed">
-                  {project.description}
-                </p>
+        <div className="p-6">
+          <h3 className="text-xl font-bold text-foreground mb-2">
+            {project.title}
+          </h3>
 
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
+          <p className="text-foreground/70 text-sm mb-4 leading-relaxed">
+            {project.description}
+          </p>
+
+          <div className="flex flex-wrap gap-2">
+            {project.tech.map((tech) => (
+              <span
+                key={tech}
+                className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary font-medium"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+    ))}
+  </motion.div>
+
+</div>
     </section>
   );
 }
