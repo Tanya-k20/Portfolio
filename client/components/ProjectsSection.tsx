@@ -151,26 +151,6 @@ export default function ProjectsSection() {
           />
 
           <div className="absolute inset-0 bg-black/20" />
-
-          <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-white/20 hover:bg-white/30 rounded-lg text-white"
-            >
-              <Github className="w-5 h-5" />
-            </a>
-
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-white/20 hover:bg-white/30 rounded-lg text-white"
-            >
-              <ExternalLink className="w-5 h-5" />
-            </a>
-          </div>
         </div>
 
         <div className="p-6">
