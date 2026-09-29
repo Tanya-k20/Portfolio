@@ -42,8 +42,8 @@ export default function HeroSection() {
       <div className="absolute bottom-20 right-10 w-72 h-72 bg-secondary/20 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-2000" />
       <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-accent/20 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-4000" />
 
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center w-full">
-        <motion.div variants={containerVariants} initial="hidden" animate="visible">
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="order-2 md:order-1 text-center md:text-left flex flex-col items-center md:items-start">
           <motion.h1
             variants={itemVariants}
             className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight font-display"
@@ -67,7 +67,7 @@ export default function HeroSection() {
 
           <motion.div
             variants={itemVariants}
-            className="mb-8 flex items-center gap-2"
+            className="mb-8 flex items-center justify-center md:justify-start gap-2"
           >
             <span className="text-foreground/70">Currently coding in:</span>
             <motion.span
@@ -83,13 +83,13 @@ export default function HeroSection() {
 
           <motion.div
             variants={itemVariants}
-            className="flex gap-4 flex-wrap"
+            className="flex flex-col sm:flex-row gap-4 w-full md:w-auto"
           >
             <a
               href="https://drive.google.com/file/d/1dOZK0M8TavGrbEaFuX5inYems06BH5vz/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/40 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2"
+              className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/40 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 w-full md:w-auto"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8m0 8l-4-2m4 2l4-2" />
@@ -98,7 +98,7 @@ export default function HeroSection() {
             </a>
             <a
               href="#contact"
-              className="px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105 active:scale-95"
+              className="px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105 active:scale-95 text-center w-full md:w-auto"
             >
               Contact
             </a>
@@ -109,7 +109,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative flex justify-center items-center"
+          className="relative flex justify-center items-center order-1 md:order-2"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full blur-3xl" />
 

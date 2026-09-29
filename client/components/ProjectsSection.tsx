@@ -130,7 +130,7 @@ export default function ProjectsSection() {
           initial={{ opacity: 0, y: 10 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex gap-3 mb-12 flex-wrap"
+          className="flex gap-3 mb-12 flex-wrap justify-center md:justify-start"
         >
           {filters.map((f) => (
             <button
