@@ -69,7 +69,7 @@ export default function CertificationsSection() {
                 key={cert.id}
                 variants={itemVariants}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="group relative glass-effect dark:glass-effect-dark p-8 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
+                className="group relative glass-effect dark:glass-effect-dark p-6 md:p-8 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
               >
                 <div
                   className={`absolute inset-0 opacity-0 group-hover:opacity-10 bg-gradient-to-br ${cert.color} transition-opacity duration-300`}

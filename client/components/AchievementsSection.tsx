@@ -121,12 +121,12 @@ export default function AchievementsSection() {
               >
                 <button
                   onClick={() => setExpandedId(isExpanded ? null : achievement.id)}
-                  className="w-full text-left p-8 border-l-4 border-primary hover:border-secondary transition-colors duration-300"
+                  className="w-full text-left p-5 md:p-8 border-l-4 border-primary hover:border-secondary transition-colors duration-300"
                 >
-                  <div className="flex gap-6 items-start">
+                  <div className="flex gap-4 md:gap-6 items-start">
                     <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center h-16 w-16 rounded-lg bg-gradient-to-br from-primary to-secondary">
-                        <Icon className="h-8 w-8 text-primary-foreground" />
+                      <div className="flex items-center justify-center h-12 w-12 md:h-16 md:w-16 rounded-lg bg-gradient-to-br from-primary to-secondary">
+                        <Icon className="h-6 w-6 md:h-8 md:w-8 text-primary-foreground" />
                       </div>
                     </div>
 
@@ -159,7 +159,7 @@ export default function AchievementsSection() {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="border-t border-border/50 p-8 bg-foreground/2"
+                      className="border-t border-border/50 p-5 md:p-8 bg-foreground/2"
                     >
                       <div className="space-y-6">
                         <div>

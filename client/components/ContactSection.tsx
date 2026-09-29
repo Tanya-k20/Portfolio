@@ -95,7 +95,7 @@ export default function ContactSection() {
             animate={inView ? "visible" : "hidden"}
             className="space-y-8"
           >
-            <motion.div variants={itemVariants} className="glass-effect dark:glass-effect-dark p-8 rounded-xl">
+            <motion.div variants={itemVariants} className="glass-effect dark:glass-effect-dark p-6 md:p-8 rounded-xl">
               <Mail className="w-8 h-8 text-primary mb-4" />
               <h3 className="text-xl font-bold text-foreground mb-2">Email</h3>
               <a
@@ -106,7 +106,7 @@ export default function ContactSection() {
               </a>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="glass-effect dark:glass-effect-dark p-8 rounded-xl">
+            <motion.div variants={itemVariants} className="glass-effect dark:glass-effect-dark p-6 md:p-8 rounded-xl">
               <h3 className="text-xl font-bold text-foreground mb-6">Follow Me</h3>
               <div className="flex gap-4">
                 {socials.map((social) => {
@@ -133,7 +133,7 @@ export default function ContactSection() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
             onSubmit={handleSubmit}
-            className="glass-effect dark:glass-effect-dark p-8 rounded-xl"
+            className="glass-effect dark:glass-effect-dark p-6 md:p-8 rounded-xl"
           >
             <div className="space-y-6">
               <div className="relative">
