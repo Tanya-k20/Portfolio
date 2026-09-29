@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-border/50 bg-background/50 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6 py-12 md:py-16">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h3 className="text-lg font-bold gradient-text mb-4 font-display">Tanya K</h3>
             <p className="text-foreground/70 text-sm">

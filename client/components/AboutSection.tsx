@@ -20,11 +20,6 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
-<img
-  src="/assets/Tatac.png"
-  alt="test"
-  className="w-40 h-40 border"
-/>
 
 const education = [
     {
@@ -184,7 +179,7 @@ const education = [
                         initial={{ opacity: 0, x: -20 }}
                         animate={inView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className="relative pl-20"
+                        className="relative pl-14 md:pl-20"
                       >
                         {/* Timeline dot */}
                         <motion.div

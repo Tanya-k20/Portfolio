@@ -131,8 +131,8 @@ export default function HeroSection() {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity }}
-            className="absolute inset-0 rounded-full border-2 border-transparent border-t-primary border-r-secondary"
-            style={{ width: "340px", height: "340px", left: "50%", top: "50%", transform: "translate(-50%, -50%)" }}
+            className="absolute inset-0 rounded-full border-2 border-transparent border-t-primary border-r-secondary w-[280px] h-[280px] md:w-[340px] md:h-[340px]"
+            style={{ left: "50%", top: "50%", transform: "translate(-50%, -50%)" }}
           />
         </motion.div>
       </div>
