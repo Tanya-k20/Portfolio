@@ -73,7 +73,7 @@ export default function SkillsSection() {
                 key={idx}
                 variants={itemVariants}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="glass-effect dark:glass-effect-dark p-8 rounded-xl hover:shadow-2xl transition-all duration-300"
+                className="glass-effect dark:glass-effect-dark p-6 md:p-8 rounded-xl hover:shadow-2xl transition-all duration-300"
               >
                 <div className={`inline-block p-3 rounded-lg bg-gradient-to-br ${category.color} mb-4`}>
                   <Icon className="w-6 h-6 text-white" />
@@ -103,7 +103,7 @@ export default function SkillsSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 glass-effect dark:glass-effect-dark p-8 rounded-xl"
+          className="mt-16 glass-effect dark:glass-effect-dark p-6 md:p-8 rounded-xl"
         >
           <h3 className="text-2xl font-bold text-foreground mb-8 font-display">Technical Proficiency</h3>
           <div className="space-y-6">
